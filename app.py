@@ -1,7 +1,7 @@
 from flask_pymongo import PyMongo
 import os
 from os import path
-from flask import Flask
+from flask import Flask, render_template, redirect, request, url_for
 if os.path.exists("env.py"):
     import env
 
@@ -17,7 +17,7 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/index')
 def index():
-    return "Na, mostmar mindjart kesz! =)"
+    return "Hello World! =)"
 
 
 if __name__ == '__main__':

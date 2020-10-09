@@ -1,0 +1,16 @@
+{% extends 'base.html'%} {% block content %}
+<html>
+    <head>
+
+    </head>
+    <body>
+        {% for task in tasks %}
+            {{recipes.title}}
+            {{recipes.category_name}}
+            {{recipes.ingredients}}
+            {{recipes.steps}}
+            {{recipes.picture}}
+        {% endfor %}
+    </body>
+</html>
+{% endblock %} 
