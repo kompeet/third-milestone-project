@@ -1,0 +1,56 @@
+{% extends 'base.html'%}
+{% block content %}
+<h3>Share your liqu0r</h3>
+<div class="row">
+    <form action="" method="POST" class="col s12">
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">title</i>
+                <input id="recipe_title" name="recipe_title" type="text">
+                <label for="icon_prefix"> Title </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">format_list_bulleted</i>
+                <textarea name="recipe_ingredients" id="recipe_ingredients" class="materialize-textarea"></textarea>
+                <label for="icon_list">List of Ingredients</label>
+            </div>
+        </div>
+      <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">mode_edit</i>
+                <textarea name="recipe_ingredients" id="recipe_ingredients" class="materialize-textarea"></textarea>
+                <label for="icon_edit">Instructions</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">image</i>
+                <input id="recipe_image" name="recipe_image" type="text">
+                <label for="icon_prefix"> Provide an URL </label>
+            </div>
+        </div>
+    <div class="row">
+    <div class="input-field col s12">
+    <i class="material-icons prefix">add_to_photos</i>
+    <select id="category" name="category_name">
+      <option value="" disabled selected>Choose Category</option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+      <option value="4">Option 4</option>
+      <option value="5">Option 5</option>
+      <option value="6">Option 6</option>
+      <option value="7">Option 7</option>
+    </select>
+    <label>Recipe category</label>
+  </div>
+  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
+    </div>
+    </form>
+</div>
+
+{% endblock %}
