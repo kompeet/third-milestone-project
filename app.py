@@ -15,14 +15,23 @@ mongo = PyMongo(app)
 
 @app.route('/')
 
+
 @app.route('/get_recipes')
 def get_recipes():
     return render_template("recipes.html", recipes=mongo.db.recipes.find())
+
 
 @app.route('/add_recipes')
 def add_recipes():
     return render_template('addrecipes.html',
     categories=mongo.db.categories.find())
+    
+
+@app.route('/insert_recipe', methods=['POST'])
+def insert_recipe():
+    recipes = mongo.db.recipes
+    recipes.insert_one(request.form.to_dict())
+    return redirect(url_for('get_recipes'))
 
 
 if __name__ == '__main__':
