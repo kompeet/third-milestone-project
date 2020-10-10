@@ -10,14 +10,16 @@
    <header>
  <nav>
      <div class="nav-wrapper">
-                <a href="{{url_for('get_recipes')}}" class="brand-logo"></a> <img src="#">
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <a href="{{url_for('get_recipes')}}" class="brand-logo">
+                <img src="" class="logo">     
+                <a class="title"> liqu0r </a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons"></i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="{{url_for('get_recipes')}}">liqu0rs</a></li>
+                    <li><a href="{{url_for('get_recipes')}}">Cocktails</a></li>
                     <li><a href="{{url_for('add_recipe')}}">Add Your liqu0r </a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
-                    <li><a href="{{url_for('get_recipes')}}">liqu0rs</a></li>
+                    <li><a href="{{url_for('get_recipes')}}">Cocktails</a></li>
                     <li><a href="{{url_for('add_recipe')}}">Add Your liqu0r</a></li>
                 </ul>
             </div>
