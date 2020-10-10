@@ -7,28 +7,28 @@
       <div class="row">
          <div class="input-field col s12">
             <i class="material-icons prefix">title</i>
-            <input id="title" name="title" type="text">
+            <input id="title" name="title" type="text" value="{{recipe.title}}">
             <label for="icon_prefix"> Title </label>
          </div>
       </div>
       <div class="row">
          <div class="input-field col s12">
             <i class="material-icons prefix">format_list_bulleted</i>
-            <textarea name="ingredients" id="ingredients" class="materialize-textarea"></textarea>
+            <textarea name="ingredients" id="ingredients" class="materialize-textarea"> {{recipe.ingredients}}</textarea>
             <label for="icon_list">List of Ingredients</label>
          </div>
       </div>
       <div class="row">
          <div class="input-field col s12">
             <i class="material-icons prefix">mode_edit</i>
-            <textarea name="how_to" id="how_to" class="materialize-textarea"></textarea>
+            <textarea name="steps" id="steps" class="materialize-textarea">{{recipe.steps}}</textarea>
             <label for="icon_edit">Instructions</label>
          </div>
       </div>
       <div class="row">
          <div class="input-field col s12">
             <i class="material-icons prefix">image</i>
-            <input id="picture" name="picture" type="text">
+            <input id="picture" name="picture" type="text" value="{{recipe.picture}}">
             <label for="icon_picture"> Provide an URL </label>
          </div>
       </div>
@@ -38,10 +38,15 @@
             <!--Select a category with a disabled with instructions-->
             <select id="category" name="category_name">
                <option value="" disabled selected>Choose Category</option>
+               <!--If the category match the recipe category name, we display it, if doesn't match the user can choose a new one-->
                {% for cat in categories %}
-               <option value="{{cat.category_name}}">{{cat.category_name}}</option>
-               {% endfor %}
-            </select>
+               {% if cat.category_name == recipe.category_name%}
+                      <option value="{{cat.category_name}}" selected >{{cat.category_name}}</option>
+                      {% else %}
+                       <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+                    {% endif %}
+                  {% endfor %}
+           </select>
             <label>Recipe category</label>
          </div>
          <!-- Submit button to insert the new recipe, and get redirected to the get_recipes page -->
