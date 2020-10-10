@@ -11,16 +11,23 @@
               <span class="card-title">{{recipe.title}}</span>
             </div>
             <div class="card-content">
-              <ul> <strong> Ingredients: </strong> <br> {{recipe.ingredients}}</ul>
-                <p> <strong> Steps: </strong> <br> {{recipe.steps}} </p>
+              <ul> <h5> Ingredients:</h5> <br> {{recipe.ingredients}}</ul>
+               <p> <h5> Steps: </h5> <br>{{recipe.Steps}} </p>
             </div>
             <div class="card-action">
+            <h6> <strong> Category: </strong> </h6>
               <a href="#">{{recipe.category_name}}</a>
-              <div class="edit_delete">
-                <i class="material-icons">expand_more</i>
-                <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn"><i class="material-icons left">edit</i>Edit</a>
-                <a class="waves-effect waves-light btn"><i class="material-icons right">delete_forever</i>Delete</a>
-               </div>
+              <div class="container">
+               <ul class="collapsible">
+                    <li>
+                    <div class="collapsible-header"><i class="material-icons">expand_more</i> More options </div>
+                    <div class="collapsible-body row">
+                    <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn col s6 m12 btn_recipe"><i class="material-icons left">edit</i>Edit</a>
+                    <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn col s6 m12 btn_recipe"><i class="material-icons left">delete_forever</i>Delete</a>
+                    </div>
+                    </li>
+               </ul>
+            </div>
             </div>
           </div>
         </div>

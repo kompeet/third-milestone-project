@@ -1,3 +1,9 @@
-body {
-    background-color: rgb(36, 18, 56);
+.btn_recipe{
+    height: 2.1rem;
+    width: 1rem;
+    line-height: 24px;
+    margin: 5px 5px;
+    padding: 0 0.5em;
+    border: 0.1rem  #26a69a solid;
+    border-radius:0.3rem;
 }
