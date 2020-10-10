@@ -16,6 +16,11 @@
             </div>
             <div class="card-action">
               <a href="#">{{recipe.category_name}}</a>
+              <div class="edit_delete">
+                <i class="material-icons">expand_more</i>
+                <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn"><i class="material-icons left">edit</i>Edit</a>
+                <a class="waves-effect waves-light btn"><i class="material-icons right">delete_forever</i>Delete</a>
+               </div>
             </div>
           </div>
         </div>
