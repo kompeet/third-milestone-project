@@ -1,27 +1,26 @@
-
+<!-- Base document used for following DRY -Dont Repeat Yourself - principle  -->
 <!DOCTYPE html>
 <html>
 
 <head>
-     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css"/>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+      <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css"/>
 </head>
-
-<header>
-</header>
-
-<body>
-<div class="container">
-    {% block content %} {% endblock %}
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function() {
-    $('select').material_select();
-  });
-</script>
-</body>
+   <header></header>
+   <body>
+   <!-- Block content container-->
+      <div class="container">
+         {% block content %} {% endblock %}
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!-- JavaScript codes -->
+      <script type="text/javascript">
+         $(document).ready(function() {
+         //When the document is ready, the user is able to select a category before submiting the recipe
+         $('select').material_select();
+         });
+      </script>
+   </body>
 </html> 
