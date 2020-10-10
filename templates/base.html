@@ -31,6 +31,36 @@
       <div class="container">
          {% block content %} {% endblock %}
       </div>
+      <footer class="page-footer">
+          <div class="footer-copyright">
+            <div class="container">
+            &copy; Peter Komaromi
+            <a class="waves-effect waves-light btn-small right btn modal-trigger btn-footer" href="#modal1"><i class="material-icons left"> message </i>Feedback</a> 
+            <a href="https://github.com/krisztinatxt" target="_blank" rel="noopener" class="waves-effect waves-light btn-small right btn-footer"><i class="material-icons left"> code </i>GitHub</a> 
+
+            </div>
+          </div>
+</footer>
+<!-- Modal Structure -->
+  <div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h4>Send me feedback!</h4>
+      <form onsubmit="return sendMail(this);" id="feedbackForm">
+                     <label for="name" class="label-name">Name:</label>
+                     <input type="text" name="name" id="name" placeholder="Your name..." required>
+                     <label for="email" class="label-email">Email:</label>
+                     <input type="email" name="email" id="email" placeholder="Your email address..." required>
+                     <label for="feedback" class="label-feedback">Feedback:</label>
+                     <textarea id="feedback" name="feedback" placeholder="Write your feedback here" required></textarea>
+                     <button class="btn-dark" type="submit" id="submit">Submit</button>
+        </form>
+    </div>
+    <div class="modal-footer">
+      <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+      <i class="material-icons right">send</i>
+  </button>
+    </div>
+  </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <!-- JavaScript codes -->
@@ -39,17 +69,9 @@
          //When the document is ready, the user is able to select a category before submiting the recipe
          $('select').material_select();
          $(".button-collapse").sideNav();
+          $('.modal').modal();
          });
       </script>
    </body>
-   <footer class="page-footer">
-          <div class="footer-copyright">
-            <div class="container">
-            &copy; Peter Komaromi
-            <a class="waves-effect waves-light btn-small right btn-footer"><i class="material-icons left"> message </i>Feedback</a> 
-            <a class="waves-effect waves-light btn-small right btn-footer"><i class="material-icons left"> code </i>GitHub</a> 
-
-            </div>
-          </div>
-</footer>
+   
 </html> 
