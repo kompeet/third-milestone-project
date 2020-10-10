@@ -7,7 +7,22 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
       <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css"/>
 </head>
-   <header></header>
+   <header>
+ <nav>
+     <div class="nav-wrapper">
+                <a href="{{url_for('get_recipes')}}" class="brand-logo"></a> <img src="#">
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="{{url_for('get_recipes')}}">liqu0rs</a></li>
+                    <li><a href="{{url_for('add_recipe')}}">Add Your liqu0r </a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="{{url_for('get_recipes')}}">liqu0rs</a></li>
+                    <li><a href="{{url_for('add_recipe')}}">Add Your liqu0r</a></li>
+                </ul>
+            </div>
+  </nav>
+   </header>
    <body>
    <!-- Block content container-->
       <div class="container">
@@ -20,6 +35,7 @@
          $(document).ready(function() {
          //When the document is ready, the user is able to select a category before submiting the recipe
          $('select').material_select();
+         $(".button-collapse").sideNav();
          });
       </script>
    </body>
