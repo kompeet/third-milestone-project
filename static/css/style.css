@@ -35,11 +35,14 @@ main {
     margin-left:45%;
 }
 
-.page-footer{
-    background-color: #06273A;
-    color: #CE7C2E;
+.page-footer {
+	background-color:#06273A;
+	color: #CE7C2E;
+	margin-bottom: 0;
 }
-.btn-footer{
-    padding-right: 3%;
-    color:#CE7C2E;
-} 
+
+#btn-footer,
+#btn-footer2 {
+	padding-right: 3%;
+	color: #CE7C2E;
+}
