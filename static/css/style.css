@@ -46,3 +46,30 @@ main {
 	padding-right: 3%;
 	color: #CE7C2E;
 }
+
+#modal1 {
+	background-color: #06273A;
+	color: #CE7C2E;
+	width: 40%;
+	height: 60%;
+	text-align: center;
+}
+
+#modal2,
+#modal3 {
+	display: none;
+	background-color:#06273A;
+	color:#CE7C2E;
+	width: 40%;
+	height: 20%;
+	text-align: center;
+}
+
+#modal3 {
+	height: 30%;
+}
+
+.feedback_button {
+	background: #CE7C2E;
+	color: #06273A;
+}

@@ -48,25 +48,32 @@
           </div>
 </footer>
 <!-- Modal Structure -->
-  <div id="modal1" class="modal bottom-sheet">
-    <div class="modal-content">
-      <h4>Send me feedback!</h4>
-      <form onsubmit="return sendMail(this);" id="feedbackForm">
-                     <label for="name" class="label-name">Name:</label>
-                     <input type="text" name="name" id="name" placeholder="Your name..." required>
-                     <label for="email" class="label-email">Email:</label>
-                     <input type="email" name="email" id="email" placeholder="Your email address..." required>
-                     <label for="feedback" class="label-feedback">Feedback:</label>
-                     <textarea id="feedback" name="feedback" placeholder="Write your feedback here" required></textarea>
-                     <button class="btn-dark" type="submit" id="submit">Submit</button>
-        </form>
-    </div>
-    <div class="modal-footer">
-      <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-      <i class="material-icons right">send</i>
-  </button>
-    </div>
-  </div>
+      <div id="modal1" class="modal">
+         <div class="modal-content">
+            <h4>Send me feedback!</h4>
+            <form onsubmit="return sendMail(this);">
+               <label for="name" class="label-name">Name:</label>
+               <input type="text" name="name" id="name" placeholder="Your name..." required>
+               <label for="email" class="label-email">Email:</label>
+               <input type="email" name="emailaddress" id="emailaddress" placeholder="Your email address..." required>
+               <label for="feedback" class="label-feedback">Feedback:</label>
+               <textarea id="feedback" name="feedback" placeholder="Write your feedback here" required></textarea>
+               <button class="btn waves-effect waves-light feedback_button" type="submit" value = "send" name="action">Submit <i class="material-icons right">send</i> </button>
+            </form>
+         </div>
+      </div>
+      <!--Succes message modal, will pop up when the user succesfully submitted their feedback-->
+      <div id="modal2" class="modal">
+         <div class="modal-content">
+            <h4>Thanks for your feedback!</h4>
+         </div>
+      </div>
+      <!--Error message when the feedback can't be submitted-->
+      <div id="modal3" class="modal">
+         <div class="modal-content">
+            <h4>Something went wrong... Please contact me at kompeet1@gmail.com</h4>
+         </div>
+      </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"> </script>
