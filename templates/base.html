@@ -35,8 +35,14 @@
           <div class="footer-copyright">
             <div class="container">
             &copy; Peter Komaromi
-            <a class="waves-effect waves-light btn-small right btn modal-trigger btn-footer" href="#modal1"><i class="material-icons left"> message </i>Feedback</a> 
-            <a href="https://github.com/kompeet" target="_blank" rel="noopener" class="waves-effect waves-light btn-small right btn-footer"><i class="material-icons left"> code </i>GitHub</a> 
+            <a href="https://github.com/kompeet" target="_blank" rel="noopener"
+                  class="waves-effect waves-light btn-small right" id="btn-footer2">
+               <i class="material-icons left"> code </i>My GitHub
+               </a>
+            <a class="waves-effect waves-light btn-small right  modal-trigger" href="#modal1" id="btn-footer">
+               <i class="material-icons left"> message </i>Send Feedback
+               </a>
+               
 
             </div>
           </div>
@@ -63,14 +69,13 @@
   </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"> </script>
+      <script src="{{ url_for('static', filename='js/sendEmail.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
     <!-- JavaScript codes -->
-      <script type="text/javascript">
-         $(document).ready(function() {
-         //When the document is ready, the user is able to select a category before submiting the recipe
-         $('select').material_select();
-         $(".button-collapse").sideNav();
-          $('.modal').modal();
-         });
+      <script>
+         $(".dropdown-button").dropdown();
       </script>
    </body>
    
