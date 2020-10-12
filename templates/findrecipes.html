@@ -1,17 +1,21 @@
 {% extends 'base.html'%}
 {% block content %}
-<nav>
-    <div class="nav-wrapper">
-      <form>
-        <div class="input-field">
-          <input id="search" type="search" required>
-          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-          <i class="material-icons">close</i>
+<div class="content">
+        <div class="row text-frame">
+            <div class="col s10 offset-s1">
+                <!-- Jinja length command obtained from Stack Overflow -->
+                {% if matches|length == 0 %}
+                    <h5 class="noresult">No results found for your search.</h5>
+                {% else %}
+                    <h5>Search results for <em>"{{search_term}}":</em></h5>
+                    {% for match in matches %}
+                    <a class="wordlink" href="{{url_for('display_word', word=match)}}">{{match}}</a>
+                    <br/>
+                    {% endfor %}
+                {% endif %}
+            </div>
         </div>
-      </form>
     </div>
-  </nav>
-
 
 
 
