@@ -34,10 +34,11 @@ def get_recipes():
 
 
 #Add new recipe using a form, submiting it using POST method
-@app.route('/add_recipe')
 def add_recipe():
-    return render_template('addrecipes.html',
-    categories=mongo.db.categories.find())
+    all_categories = list(mongo.db.categories.find())
+    return render_template(
+        'addrecipes.html',
+        categories=all_categories)
     
 
 @app.route('/insert_recipe', methods=['POST'])
