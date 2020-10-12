@@ -27,12 +27,6 @@ def home():
     return render_template("index.html", categories=all_categories)
 
 
-#Find all of the recipes
-@app.route('/get_recipes')
-def get_recipes():
-    return render_template("recipes.html", recipes=mongo.db.recipes.find())
-
-
 
 '''Search for recipes with regex method,
     results of the search returned with the for loop in results.html
@@ -52,12 +46,22 @@ def find_recipes():
         search=search_term, no_of_docs=no_of_docs)
 
 
-# List of the recipes with find() method
-def add_recipe():
+@app.route('/get_recipes')
+def get_recipes():
+    # List of the recipes with find() method
     all_categories = list(mongo.db.categories.find())
     return render_template(
         "recipes.html",
         categories=all_categories, recipes=mongo.db.recipes.find())
+        
+
+# Add new recipe using a form, submiting it using POST method
+@app.route('/add_recipe')
+def add_recipe():
+    all_categories = list(mongo.db.categories.find())
+    return render_template(
+        'addrecipes.html',
+        categories=all_categories)     
     
 
 @app.route('/insert_recipe', methods=['POST'])
@@ -67,7 +71,7 @@ def insert_recipe():
     return redirect(url_for('get_recipes'))
 
 
-#Find a recipe by its ID then render the editrecipe HTML file
+# Find a recipe by its ID then render the editrecipe HTML file
 @app.route('/edit_recipe/<recipe_id>')
 def edit_recipe(recipe_id):
     the_recipe =  mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})  
@@ -76,7 +80,7 @@ def edit_recipe(recipe_id):
                            categories=all_categories)    
 
 
-#Update the article after editing it using JSON
+# Update the article after editing it using JSON
 @app.route('/update_recipe/<recipe_id>', methods=["POST"])
 def update_recipe(recipe_id):
     recipes = mongo.db.recipes
@@ -90,11 +94,11 @@ def update_recipe(recipe_id):
     })
 
 
-#When the recipe is updated, redirect the user to the list of recipes
+# When the recipe is updated, redirect the user to the list of recipes
     return redirect(url_for('get_recipes'))
 
 
-#Delete recipe selected by its ID then redirect the user to the list of recipes
+# Delete recipe selected by its ID then redirect the user to the list of recipes
 @app.route('/delete_recipe/<recipe_id>')
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
@@ -116,6 +120,6 @@ def display_categories(category_name):
                            categories=all_categories, )
 
 
-#Host and Port set
+# Host and Port set
 if __name__ == '__main__':
     app.run(host=os.getenv('IP'), port=os.getenv('PORT'), debug=True)
