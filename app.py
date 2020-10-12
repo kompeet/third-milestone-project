@@ -33,7 +33,26 @@ def get_recipes():
     return render_template("recipes.html", recipes=mongo.db.recipes.find())
 
 
-#Add new recipe using a form, submiting it using POST method
+
+'''Search for recipes with regex method,
+    results of the search returned with the for loop in results.html
+    If there is no result,
+    the user can see a message and a link for the Add recipe page'''
+@app.route("/find_recipes")
+def find_recipes():
+    query = request.args.get("search")
+    search_term = mongo.db.recipes.find({"ingredients": {"$regex": query}})
+    search = search_term
+    no_of_docs = mongo.db.recipes.count_documents(
+        {"ingredients": {"$regex": query}})
+    all_categories = list(mongo.db.categories.find())
+    return render_template(
+        "results.html",
+        categories=all_categories,
+        search=search_term, no_of_docs=no_of_docs)
+
+
+# List of the recipes with find() method
 def add_recipe():
     all_categories = list(mongo.db.categories.find())
     return render_template(
