@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap');
+
 
 .nav-wrapper{
     background-color: #06273A;
@@ -8,7 +10,7 @@ body {
 	display: flex;
 	min-height: 100vh;
 	flex-direction: column;
-    font-family: 'Roboto Mono', serif;
+    font-family: 'Arvo', serif;
 }
 
 main {
@@ -25,10 +27,16 @@ main {
     border-radius:0.3rem;
 }
 
-.logo{
-    width: 7rem;
-    height: 7rem;
-    text-align: center;
+nav .brand-logo {
+    padding-left: 10px;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+}
+
+#logo{
+    opacity: 0.75;
+    border-radius: 20px;
+    margin-top: 10px;
 }
 
 .title{
