@@ -51,8 +51,8 @@ def insert_recipe():
 #Find a recipe by its ID then render the editrecipe HTML file
 @app.route('/edit_recipe/<recipe_id>')
 def edit_recipe(recipe_id):
-    the_recipe =  mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    all_categories =  mongo.db.categories.find()
+    the_recipe =  mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})  
+    all_categories = list(mongo.db.categories.find())
     return render_template('editrecipe.html', recipe=the_recipe,
                            categories=all_categories)    
 
