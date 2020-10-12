@@ -1,3 +1,16 @@
-{% extends 'base.html'%} {% block content %}
-
-{% endblock %} 
+{% extends 'base.html'%}
+{% block content %}
+<!-- For loop to display category names-->
+<div class="row">
+   <h3>Categories</h3>
+   <ul class="collapsible" data-collapsible="accordion">
+      {% for category in categories %}
+      <li>
+         <div class="task_header">
+            <strong>{{category.category_name}}</strong>
+         </div>
+      </li>
+      {% endfor %}
+   </ul>
+</div>
+{% endblock %}

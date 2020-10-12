@@ -15,7 +15,10 @@ app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 
 #App's paths, functions helping to let the user "do CRUD":create, retrieve, update, and delete recipes
+
 mongo = PyMongo(app)
+DB = mongo.db
+
 
 #Homepage
 @app.route('/')
@@ -76,6 +79,13 @@ def update_recipe(recipe_id):
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
     return redirect(url_for('get_recipes'))
+
+
+
+@app.route('/get_categories')
+def get_categories():
+    return render_template('categories.html',
+                           categories=mongo.db.categories.find())
 
 
 
