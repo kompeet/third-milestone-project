@@ -1,0 +1,46 @@
+{% extends 'base.html'%}
+{% block content %}
+<!-- Block title to achieve different titles on different pages-->
+<title> {% block title %}Homepage{% endblock %} </title>
+<div class="container center" id="home">
+   <img alt="logo" class="responsive-img" id="logo" src="{{ url_for('static', filename='images/cocktail.JPG') }}">
+   <div class="row">
+      <div class="col s12 m12">
+         <h3 class="header">Established 2020 </h3>
+         <!--Information about the page, and direct link to all recipes page-->
+         <div class="card" id="home_card">
+            <div class="card-stacked">
+               <div class="card-content">
+                  <span id="info"> 34 million drinkers served annually. Everyone from a curious drinker seeking a recipe to a top-tier bar professional researching how to reduce their business’ overhead relies on liqu0r as a valued resource. <br> Enjoy! </span>
+               </div>
+               <div class="card-action">
+                  <a href="{{url_for('get_recipes')}}">Show me the cocktails</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!--Search bar with a submit button-->
+   <h5> What do you have? </h5>
+   <div class="row">
+      <div class="searchbar col m12 s12">
+         <nav>
+            <div class="nav-wrapper">
+               <form action="{{url_for('find_recipes')}}">
+                  <div class="input-field">
+                     <input id="search0" type="search" name="search" required>
+                     <label class="label-icon" for="search" id="search">
+                     <i class="material-icons">search</i></label>
+                     <i class="material-icons">close</i>
+                  </div>
+                  <div id="search_btn">
+                     <button class="btn waves-effect waves-light" id="submit" type="submit" name="action">Search
+                     </button>
+                  </div>
+               </form>
+            </div>
+         </nav>
+      </div>
+   </div>
+</div>
+{% endblock %}

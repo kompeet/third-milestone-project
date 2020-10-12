@@ -19,6 +19,9 @@ mongo = PyMongo(app)
 
 #Homepage
 @app.route('/')
+def home():
+    all_categories = list(mongo.db.categories.find())
+    return render_template("index.html", categories=all_categories)
 
 
 #Find all of the recipes
@@ -75,9 +78,6 @@ def delete_recipe(recipe_id):
     return redirect(url_for('get_recipes'))
 
 
-@app.route('/find_recipes/<recipe_id>')
-def find_recipe(recipe_id):
-    return render_template('findrecipes.html')
 
 
 #Host and Port set
