@@ -7,7 +7,7 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
       <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css"/>
       <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
-      <link rel="icon" sizes="192x192" href="{{ url_for('static', filename='images/cocktail.JPG') }}" type="image/x-icon">
+      <link rel="icon" sizes="192x192" href="{{ url_for('static', filename='images/martini.png') }}" type="image/x-icon">
 </head>
    <header>
    <!--For loop to provide the dropdown menu for categories both for desktop and mobile view-->
@@ -34,14 +34,14 @@
                <li><a href="{{url_for('get_recipes')}}">Cocktails</a></li>
                <li><a class="dropdown-button" href="#" data-activates="dropdown0">Browse by Spirits</a>
                </li>
-               <li><a href="{{url_for('add_recipe')}}">Add My Recipe</a></li>
+               <li><a href="{{url_for('add_recipe')}}">Add My liqu0r</a></li>
             </ul>
             <ul class="side-nav" id="mobile-demo">
                <li><a href="{{url_for('home')}}">Home</a></li>
                <li><a href="{{url_for('get_recipes')}}">Cocktails</a></li>
                <li><a class="dropdown-button" href="#" data-activates="dropdown1">Browse by Sprits</a>
                </li>
-               <li><a href="{{url_for('add_recipe')}}">Add My Recipe</a></li>
+               <li><a href="{{url_for('add_recipe')}}">Add My liqu0r</a></li>
             </ul>
          </div>
       </nav>
