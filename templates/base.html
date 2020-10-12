@@ -7,24 +7,44 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
       <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css"/>
       <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+      <link rel="icon" sizes="192x192" href="{{ url_for('static', filename='images/cocktail.JPG') }}" type="image/x-icon">
 </head>
    <header>
+   <!--For loop to provide the dropdown menu for categories both for desktop and mobile view-->
+      <ul id="dropdown0" class="dropdown-content">
+         {%for category in categories %}
+         <li> <a
+            href="{{url_for('display_categories', category_name=category.category_name)}}">{{category.category_name}}</a>
+         </li>
+         {% endfor %}
+      </ul>
+      <ul id="dropdown1" class="dropdown-content">
+         {%for category in categories %}
+         <li> <a
+            href="{{url_for('display_categories', category_name=category.category_name)}}">{{category.category_name}}</a>
+         </li>
+         {% endfor %}
+      </ul>
  <nav>
-     <div class="nav-wrapper">
-                <a href="{{url_for('get_recipes')}}" class="brand-logo">
-                <img src="{{ url_for('static', filename='images/cocktail.JPG') }}" class="logo">     
-                <a class="title"> liqu0r </a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons"></i></a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="{{url_for('get_recipes')}}">Cocktails</a></li>
-                    <li><a href="{{url_for('add_recipe')}}">Add Your liqu0r </a></li>
-                </ul>
-                <ul class="side-nav" id="mobile-demo">
-                    <li><a href="{{url_for('get_recipes')}}">Cocktails</a></li>
-                    <li><a href="{{url_for('add_recipe')}}">Add Your liqu0r</a></li>
-                </ul>
-            </div>
-  </nav>
+         <div class="nav-wrapper">
+            <a href="{{url_for('home')}}" class="brand-logo">liqu0r</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i> </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+               <li><a href="{{url_for('home')}}">Home</a></li>
+               <li><a href="{{url_for('get_recipes')}}">Cocktails</a></li>
+               <li><a class="dropdown-button" href="#" data-activates="dropdown0">Browse by Spirits</a>
+               </li>
+               <li><a href="{{url_for('add_recipe')}}">Add My Recipe</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+               <li><a href="{{url_for('home')}}">Home</a></li>
+               <li><a href="{{url_for('get_recipes')}}">Cocktails</a></li>
+               <li><a class="dropdown-button" href="#" data-activates="dropdown1">Browse by Sprits</a>
+               </li>
+               <li><a href="{{url_for('add_recipe')}}">Add My Recipe</a></li>
+            </ul>
+         </div>
+      </nav>
    </header>
    <body>
    <!-- Block content container-->
@@ -37,10 +57,10 @@
             &copy; Peter Komaromi
             <a href="https://github.com/kompeet" target="_blank" rel="noopener"
                   class="waves-effect waves-light btn-small right" id="btn-footer2">
-               <i class="material-icons left"> code </i>My GitHub
+               <i class="material-icons left"> work </i>My GitHub
                </a>
             <a class="waves-effect waves-light btn-small right  modal-trigger" href="#modal1" id="btn-footer">
-               <i class="material-icons left"> message </i>Send Feedback
+               <i class="material-icons left"> feedback </i>Send Feedback
                </a>
                
 
