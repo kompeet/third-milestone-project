@@ -111,9 +111,9 @@ def get_categories():
 @app.route('/display_categories/<category_name>')
 def display_categories(category_name):
     all_recipe=mongo.db.recipes.find({"category_name": category_name})
-    all_categories = mongo.db.categories.find().sort("category_name", -1)
-    return render_template('displaycategories.html',  recipes = all_recipe, category=category_name,
-                           categories=all_categories, )
+    all_categories = list(mongo.db.categories.find())
+    return render_template('displaycategories.html',  recipes=all_recipe, category=category_name,
+                           categories=all_categories)
 
 
 # Host and Port set
