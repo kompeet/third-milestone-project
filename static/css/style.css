@@ -77,6 +77,19 @@ nav .brand-logo {
 	height: 30%;
 }
 
+.card-title{
+    color: #06273A;
+}
+
+.card{
+    border:#06273A solid 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.card-image{
+    height: 30rem;
+}
+
 .feedback_button {
 	background: #CE7C2E;
 	color: #06273A;
