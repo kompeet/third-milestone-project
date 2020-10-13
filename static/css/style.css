@@ -34,7 +34,7 @@ nav .brand-logo {
 }
 
 #logo{
-    opacity: 0.75;
+    opacity: 0.85;
     border-radius: 20px;
     margin-top: 10px;
 }
@@ -88,6 +88,10 @@ nav .brand-logo {
 
 .card-image{
     height: 30rem;
+}
+
+.category-header{
+    font-size: 1.3rem;
 }
 
 .feedback_button {
