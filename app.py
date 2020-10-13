@@ -20,18 +20,15 @@ mongo = PyMongo(app)
 DB = mongo.db
 
 
-#Homepage
+# Homepage
 @app.route('/')
 def home():
     all_categories = list(mongo.db.categories.find())
     return render_template("index.html", categories=all_categories)
 
-
-
-'''Search for recipes with regex method,
-    results of the search returned with the for loop in results.html
-    If there is no result,
-    the user can see a message and a link for the Add recipe page'''
+# Find recipes
+"""Search for recipes with regex method,
+    results of the search returned with the for loop in results.html"""
 @app.route("/find_recipes")
 def find_recipes():
     query = request.args.get("search")
@@ -92,8 +89,6 @@ def update_recipe(recipe_id):
         'category_name': request.form.get('category_name'),
         'picture':request.form.get('picture')
     })
-
-
 # When the recipe is updated, redirect the user to the list of recipes
     return redirect(url_for('get_recipes'))
 
@@ -104,14 +99,15 @@ def delete_recipe(recipe_id):
     mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
     return redirect(url_for('get_recipes'))
 
-
-
+# Get Categories
+"""  Get and display categories, so the user can click on the category_name
+    and the list of the recipes"""
 @app.route('/get_categories')
 def get_categories():
     return render_template('categories.html',
                            categories=mongo.db.categories.find())
 
-
+                       
 @app.route('/display_categories/<category_name>')
 def display_categories(category_name):
     all_recipe=mongo.db.recipes.find({"category_name": category_name})
