@@ -2,10 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap');
 
 
-.nav-wrapper{
-    background-color: #06273A;
-}
-
 body {
 	display: flex;
 	min-height: 100vh;
@@ -35,6 +31,20 @@ nav .brand-logo {
 
 .title{
     margin-left:45%;
+}
+
+.nav-wrapper{
+    background-color: #06273A;
+}
+
+#search {
+	top: -0.7rem;
+}
+
+#submit {
+	background-color: #06273A;
+	color: #fff;
+	position: relative;
 }
 
 .page-footer {
@@ -88,9 +98,6 @@ nav .brand-logo {
     font-size: 1.3rem;
 }
 
-.search-btn{
-    margin-bottom: 0; 
-}
 
 .feedback_button {
 	background: #CE7C2E;
@@ -99,7 +106,6 @@ nav .brand-logo {
 
 #logo{
     opacity: 0.85;
-    margin-top: 10px;
     height: 7rem;
 }
 
