@@ -19,7 +19,7 @@ main {
     line-height: 24px;
     margin: 5px 5px;
     padding: 0 0.5em;
-    border: 0.1rem  #26a69a solid;
+    border: 0.1rem #06273A solid;
     border-radius:0.3rem;
 }
 
@@ -37,6 +37,10 @@ nav .brand-logo {
     background-color: #06273A;
 }
 
+nav ul a{
+    color: #CE7C2E;
+}
+
 #search {
 	top: -0.7rem;
 }
@@ -46,6 +50,12 @@ nav .brand-logo {
 	color: #fff;
 	position: relative;
 }
+
+.btn, .btn-large {
+    background-color: #06273A;
+    color: rgba(255,255,255,0.8);
+}
+
 
 .page-footer {
 	background-color:#06273A;
@@ -113,7 +123,6 @@ nav .brand-logo {
     color:#06273A;
     min-height: 100vh;
     padding-bottom: 6.25rem;
-	
 }
 
 #info{
