@@ -94,6 +94,10 @@ nav .brand-logo {
     font-size: 1.3rem;
 }
 
+.search-btn{
+    margin-bottom:0;
+}
+
 .feedback_button {
 	background: #CE7C2E;
 	color: #06273A;
