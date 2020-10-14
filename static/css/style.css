@@ -111,6 +111,9 @@ nav .brand-logo {
 
 #home{
     color:#06273A;
+    min-height: 100vh;
+    padding-bottom: 6.25rem;
+	
 }
 
 #info{
