@@ -1,0 +1,41 @@
+{% extends 'base.html'%}
+{% block content %}
+<title> {% block title %} {{recipe.title}} {% endblock %} </title>
+<div class="container recipe_one">
+   <div class="row-featurette">
+      <div class="col md7">
+         <h4 class="card-title center">{{recipe.title}}</h4>
+         <h5> Ingredients: </h5>
+        <ul>
+        {% for ingredient in ingredients %}
+            <li>{{ ingredient }}</li>
+        {% endfor %}
+        </ul>
+         <h5> Steps: </h5>
+        <p><br>{{recipe.steps}} </p>
+      </div>
+      <div class="col md5">
+         <img alt="picture" class="responsive-img" src="{{recipe.picture}}">
+         <div class="card-action">
+            <h5 class ="page-category"> Category: </h5>
+            <a class = "category-name" href="{{url_for('display_categories', category_name= recipe.category_name)}}">{{recipe.category_name}}</a>  
+         </div>
+      </div>
+   </div>
+</div>
+<div class="container">
+   <ul class="collapsible">
+      <li>
+         <div class="collapsible-header"><i class="material-icons">expand_more</i> More options </div>
+         <div class="collapsible-body row">
+            <div class="col md6 s6">
+            <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn col s6 m12"><i class="material-icons left">edit</i>Edit</a>
+            </div>
+            <div class="col md6 s6">
+            <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" id="delete" class="waves-effect waves-light btn col s6 m12"><i class="material-icons left">delete_forever</i>Delete</a>
+            </div>
+         </div>
+      </li>
+   </ul>
+</div>
+{% endblock %}
