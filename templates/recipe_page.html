@@ -4,7 +4,7 @@
 <div class="container recipe_one">
    <div class="row-featurette">
       <div class="col md7">
-         <h4 class="card-title center">{{recipe.title}}</h4>
+         <h4 class="card-title center"> {{recipe.title}} </h4>
          <h5> Ingredients: </h5>
         <ul>
         {% for ingredient in ingredients %}
@@ -12,7 +12,12 @@
         {% endfor %}
         </ul>
          <h5> Steps: </h5>
-        <p><br>{{recipe.steps}} </p>
+         <ul>
+         {% for step in steps %}
+        <li>{{ step }}</li> 
+        {% endfor %}
+         </ul>
+        
       </div>
       <div class="col md5">
          <img alt="picture" class="responsive-img" src="{{recipe.picture}}">

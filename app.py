@@ -124,7 +124,7 @@ def display_recipe(recipe_id):
     all_categories = list(mongo.db.categories.find())
     return render_template(
         'recipe_page.html', recipe=the_recipe,
-        categories=all_categories, ingredients=ingredients)
+        categories=all_categories, ingredients=ingredients, steps=steps)
 
 
 # Host and Port set
