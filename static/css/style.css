@@ -33,12 +33,6 @@ nav .brand-logo {
     letter-spacing: 2px;
 }
 
-#logo{
-    opacity: 0.85;
-    border-radius: 20px;
-    margin-top: 10px;
-}
-
 .title{
     margin-left:45%;
 }
@@ -95,10 +89,24 @@ nav .brand-logo {
 }
 
 .search-btn{
-    margin-bottom:0;
+    margin-bottom: 0; 
 }
 
 .feedback_button {
 	background: #CE7C2E;
 	color: #06273A;
 }
+
+#logo{
+    opacity: 0.85;
+    margin-top: 10px;
+    height: 7rem;
+}
+
+#home{
+    color:#06273A;
+}
+
+#info{
+    font-size: 1.2rem;
+} 
