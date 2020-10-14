@@ -115,6 +115,17 @@ def display_categories(category_name):
     return render_template('displaycategories.html',  recipes=all_recipe, category=category_name,
                            categories=all_categories)
 
+# Displaying cards with split method
+@app.route('/display_recipe/<recipe_id>')
+def display_recipe(recipe_id):
+    the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    ingredients = the_recipe["ingredients"].split(",")
+    steps = the_recipe["steps"].split(",")
+    all_categories = list(mongo.db.categories.find())
+    return render_template(
+        'recipe_page.html', recipe=the_recipe,
+        categories=all_categories, ingredients=ingredients)
+
 
 # Host and Port set
 if __name__ == '__main__':
