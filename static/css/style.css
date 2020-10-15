@@ -7,11 +7,14 @@ body {
 	min-height: 100vh;
 	flex-direction: column;
     font-family: 'Arvo', serif;
+    background-color: #eeeeee;
 }
 
 main {
     flex: 1 0 auto;
   }
+
+/* Homepage(logo, info card, search bar) */
 
 .btn_recipe{
     height: 2.1rem;
@@ -33,7 +36,7 @@ nav .brand-logo {
     margin-left:45%;
 }
 
-.nav-wrapper{
+.nav-wrapper {
     background-color: #06273A;
 }
 
@@ -45,11 +48,36 @@ nav ul a{
 	top: -0.7rem;
 }
 
+#dropdown0{
+    background-color: #06273A;
+}
+
+.dropdown-content li>a, .dropdown-content li>span {
+    color:#CE7C2E;
+    background-color: #06273A;
+}
+
+
+
+
+
+
+/* Stick footer to the bottom */
+
+.results,
+.categories,
+.addrecipes,
+.recipe_one {
+	min-height: 100vh;
+}
+
 #submit {
 	background-color: #06273A;
 	color: #fff;
 	position: relative;
 }
+
+/* Add new recipes title and submit button */
 
 .btn, .btn-large {
     background-color: #06273A;
@@ -68,6 +96,8 @@ nav ul a{
 	padding-right: 3%;
 	color: #CE7C2E;
 }
+
+/* Feedback form */
 
 #modal1 {
 	background-color: #06273A;
@@ -91,17 +121,49 @@ nav ul a{
 	height: 30%;
 }
 
-.card-title{
+/*Recipes, cards */
+
+#search_recipes{
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+#delete {
+	background: #ff0000;
+}
+
+
+.card-title {
     color: #06273A;
 }
 
 .card{
-    border:#06273A solid 0.5rem;
-    border-radius: 0.5rem;
+    border:#EEE solid 1px;
 }
 
 .card-image{
-    height: 30rem;
+    max-height: 17rem;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+    color: #9D2A2C;
+    font-size: .75rem;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+.card .card-content {
+    padding: 0;
+}
+
+.card .card-action {
+    padding: 0;
+
+}
+
+.category-name {
+	font-size: 1.5rem;
+    color: #9D2A2C;
 }
 
 .category-header{
