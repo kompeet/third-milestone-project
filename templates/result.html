@@ -7,12 +7,10 @@
 {% if no_of_docs == 0 %}
 <div class="center">
 <h5> 404</h5>
-<p> No liqu0r found </p>
-<img alt="error" class="responsive-img" id="error" src="{{ url_for('static', filename='images/error.JPG') }}">
-<a href="{{url_for('add_recipe')}}"> Is it your favourite? Share your liqu0r...</a>
+<p> Empty glass... =( no cocktail found. </p>
+<img alt="error" class="responsive-img" src="{{ url_for('static', filename='images/error.JPG') }}">
 <br>
-<br>
-<a href="{{url_for('get_recipes')}}">Don't you know what to drink? Get an idea!</a>
+<a href="{{url_for('get_recipes')}}" id="error">Don't you know what to drink? Get an idea!</a>
 </div>
 {% endif %}
 <!-- For loop to display the results for the search
