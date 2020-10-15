@@ -58,17 +58,12 @@ nav ul a{
 }
 
 
-
-
-
-
-/* Stick footer to the bottom */
-
 .results,
 .categories,
 .addrecipes,
 .recipe_one {
 	min-height: 100vh;
+    margin-top: 20px;
 }
 
 #submit {
@@ -76,6 +71,21 @@ nav ul a{
 	color: #fff;
 	position: relative;
 }
+
+#logo{
+    opacity: 0.85;
+    height: 7rem;
+}
+
+#home{
+    color:#06273A;
+    min-height: 100vh;
+    padding-bottom: 6.25rem;
+}
+
+#info{
+    font-size: 1.2rem;
+} 
 
 /* Add new recipes title and submit button */
 
@@ -124,8 +134,8 @@ nav ul a{
 /*Recipes, cards */
 
 #search_recipes{
-    padding-bottom: 2rem;
-    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+    padding-top: 2.5rem;
 }
 
 #delete {
@@ -176,17 +186,11 @@ nav ul a{
 	color: #06273A;
 }
 
-#logo{
-    opacity: 0.85;
-    height: 7rem;
+img.responsive-img {
+    max-width: 40%;
+    height: auto;
 }
 
-#home{
-    color:#06273A;
-    min-height: 100vh;
-    padding-bottom: 6.25rem;
+#error {
+    color: #9D2A2C;
 }
-
-#info{
-    font-size: 1.2rem;
-} 
