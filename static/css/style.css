@@ -157,7 +157,7 @@ nav ul a{
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
     color: #9D2A2C;
-    font-size: .75rem;
+    font-size: 1rem;
     line-height: 30px;
     font-weight: 600;
 }
@@ -186,11 +186,77 @@ nav ul a{
 	color: #06273A;
 }
 
-img.responsive-img {
-    max-width: 40%;
-    height: auto;
-}
+
 
 #error {
     color: #9D2A2C;
+}
+
+/*==================================================
+=                Media Queries             =
+==================================================*/
+
+/*** Small mobile devices ***/
+
+
+/*** Tested on Sony Exepria Z1 Compact, Moto G4,Galaxy S5,Pixel2,Iphone5/SE,Iphone 6/7/8,IphoneX,IphoneX, Ipad and Ipad Pro ***/
+
+@media only screen and (min-width: 310px) and (max-width: 769px) {
+	body {
+        font-size: 1.70rem;
+    }
+    
+    .side-nav li>a {
+        font-size: 1.50rem;
+        padding: 0 8px;
+    }
+    .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+        font-size: 1.55rem;
+    }
+
+    .card .card-title {
+        font-size: 1.455;
+    }
+
+    #error {
+        font-size: 1.75rem;
+    }
+    p {
+        font-size: 1.10rem;
+    }
+
+    #info {
+        font-size: 1.65rem;
+    }
+}
+
+
+/***Tested on  Ipad and Ipad Pro ***/
+
+@media screen and (min-width: 770px) and (max-width: 1023px) {
+	body { font-size: 1.70rem;
+    }
+    
+    .side-nav li>a {
+        font-size: 1.50rem;
+        padding: 0 8px;
+    }
+    .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+        font-size: 1,80rem;
+    }
+
+    .card .card-title {
+        font-size: 1.75rem;
+    }
+
+    #error {
+        font-size: 1.85rem;
+    }
+    p {
+        font-size: 1.50rem;
+    }
+
+    #info {
+        font-size: 1.85rem;
+    }
 }

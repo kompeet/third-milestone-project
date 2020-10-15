@@ -28,7 +28,7 @@
             {% for recipe in recipes %}
             <!-- Cards containing the basic informations about the cocktails and the link the full version
             To offer better user experience. The picture and the title is also clickable to the same page as View recipe link -->
-      <div class="recipe-publish col m4 s12">
+      <div class="recipe-publish col m4 s6">
         <div class="card" id="recipecard">
             <div class="card-image" id="imagerecipe">
                 <a href="{{url_for('display_recipe', recipe_id=recipe._id)}}">
