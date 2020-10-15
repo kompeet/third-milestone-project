@@ -29,11 +29,8 @@ The structure is very similar to the recipes.html. Recipes are loaded as a list 
             <div class="card-content">
                <a href="{{url_for('display_recipe', recipe_id=recipe._id)}}">
                <span class="card-title" id="titlerecipe">{{recipe.title}}</span>
-               </a>
-               <a href="{{url_for('display_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light"> View liqu0r</a>
             </div>
             <div class="card-action">
-               <h6 class="category-header"> Cocktail: </h6>
                <a href="{{url_for('find_recipes', category_name= recipe.category_name)}}">{{recipe.category_name}}</a>  
             </div>
          </div>
