@@ -1,11 +1,13 @@
 {% extends 'base.html'%}
 {% block content %}
+<!--When the user clicks on the puctire this page will be loaded to see the full recipe-->
 <title> {% block title %} {{recipe.title}} {% endblock %} </title>
 <div class="container recipe_one">
    <div class="row-featurette">
       <div class="col md7">
          <h4 class="card-title center"> {{recipe.title}} </h4>
          <h5> Ingredients: </h5>
+         <!--Ordered list ingredients with square steps with numbers split by semicolon (;)-->
         <ol style="list-style-type:square;">
         {% for ingredient in ingredients %}
             <li>{{ ingredient }}</li>
@@ -21,11 +23,12 @@
       <div class="col md5">
          <img alt="picture" class="responsive-img" src="{{recipe.picture}}">
          <div class="card-action">
-            <a class = "category-name" href="{{url_for('display_categories', category_name= recipe.category_name)}}">{{recipe.category_name}}</a>  
+            <a class ="category-name" href="{{url_for('display_categories', category_name= recipe.category_name)}}">{{recipe.category_name}}</a>  
          </div>
       </div>
    </div>
 </div>
+<!-- Collaps container with edit and delete buttons-->
 <div class="container">
    <ul class="collapsible">
       <li>
