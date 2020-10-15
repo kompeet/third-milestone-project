@@ -1,8 +1,12 @@
 <!--Adding recipes by using a form -->
 {% extends 'base.html'%}
 {% block content %}
-<h3>Share your liqu0r</h3>
+<!-- Block title to achieve different titles on different pages -->
+<title> {% block title %}New Cocktail{% endblock %} </title>
+<h3 id="addnew">Share your liqu0r</h3>
+<div class="container addrecipes">
 <div class="row">
+<!-- Insert_recipe function url linked -->
     <form action="{{ url_for('insert_recipe') }}" method="POST" class="col s12">
       <div class="row">
             <div class="input-field col s12">
@@ -14,14 +18,14 @@
       <div class="row">
          <div class="input-field col s12">
             <i class="material-icons prefix">format_list_bulleted</i>
-            <textarea name="ingredients" id="ingredients" class="materialize-textarea"></textarea>
+            <textarea placeholder="Add a semicolon after each ingredient" name="ingredients" id="ingredients" class="materialize-textarea"></textarea>
             <label for="icon_list">List of Ingredients</label>
          </div>
       </div>
       <div class="row">
          <div class="input-field col s12">
             <i class="material-icons prefix">mode_edit</i>
-            <textarea name="steps" id="steps" class="materialize-textarea"></textarea>
+            <textarea placeholder="Add a semicolon after each step" name="steps" id="steps" class="materialize-textarea"></textarea>
             <label for="icon_edit">Steps</label>
          </div>
       </div>
@@ -35,7 +39,7 @@
       <div class="row">
          <div class="input-field col s12">
             <i class="material-icons prefix">add_to_photos</i>
-            <!--Select a category with a disabled with instructions-->
+            <!--Select a category -->
             <select id="category" name="category_name">
                <option value="" disabled selected>Choose Category</option>
                {% for cat in categories %}
