@@ -1,6 +1,10 @@
 <!--Editing recipes -->
 {% extends 'base.html'%}
 {% block content %}
+<!-- Block title to achieve different titles on different pages -->
+<title> {% block title %}Edit{% endblock %} </title>
+<!--Edit existing recipes, identification provided by passing the recipe's ID
+so the user can edit a small piece without the obligation to retype the other parts -->
 <h3>Edit this liqu0r</h3>
 <div class="row">
    <form action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" class="col s12">
