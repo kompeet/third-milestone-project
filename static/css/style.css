@@ -215,7 +215,7 @@ nav ul a{
     }
 
     .card .card-title {
-        font-size: 1.455;
+        font-size: 1.45rem;
     }
 
     #error {
@@ -242,7 +242,7 @@ nav ul a{
         padding: 0 8px;
     }
     .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
-        font-size: 1,80rem;
+        font-size: 1.80rem;
     }
 
     .card .card-title {
