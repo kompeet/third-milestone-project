@@ -231,9 +231,9 @@ To deploy the site on Heroku, you have to follow these steps:
 
 Ensure that you have these components:
 
-- [Pip](https://pip.pypa.io/en/stable/installing/);
+- [Pip](https://pip.pypa.io/en/stable/installing/)
 - [MongoDBaccount](https://www.mongodb.com/cloud/atlas) and set up database.
-- [Python3](https://www.python.org/downloads/);
+- [Python3](https://www.python.org/downloads/)
 - [Git](https://gist.github.com/derhuerst/1b15ff4652a867391f03)
 
 1. Download the repository from GitHub by clicking the "download zip" button.
@@ -260,31 +260,31 @@ The app's preview should be available.
 
 # Technologies
 
-- [GitHub](https://github.com/);
-- [GitPod](https://gitpod.io/);
-- [Heroku](https://dashboard.heroku.com/);
-- [MongoDB](https://www.mongodb.com/);
-- [HTML](https://en.wikipedia.org/wiki/HTML5);
+- [GitHub](https://github.com/)
+- [GitPod](https://gitpod.io/)
+- [Heroku](https://dashboard.heroku.com/)
+- [MongoDB](https://www.mongodb.com/)
+- [HTML](https://en.wikipedia.org/wiki/HTML5)
 - [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
-- [JavaScript](https://en.wikipedia.org/wiki/JavaScript);
-- [Jquery](https://jquery.com/);
-- [Materialize](https://materializecss.com/);
-- [Python](https://www.python.org/download/releases/3.0/);
-- [EmailJS](https://www.emailjs.com/);
-- [MarkDownLit](https://dlaa.me/markdownlint/);
-- [Balsamiq](https://balsamiq.com/);
-- [HTMLValidator](https://validator.w3.org/);
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+- [Jquery](https://jquery.com/)
+- [Materialize](https://materializecss.com/)
+- [Python](https://www.python.org/download/releases/3.0/)
+- [EmailJS](https://www.emailjs.com/)
+- [MarkDownLit](https://dlaa.me/markdownlint/)
+- [Balsamiq](https://balsamiq.com/)
+- [HTMLValidator](https://validator.w3.org/)
 - [CSSValidator](https://jigsaw.w3.org/css-validator/)
-- [JavaScriptValidator](https://esprima.org/demo/validate.html);
-- [HTMLFormatter](https://htmlformatter.com/);
-- [CSSBeautifier](https://www.freeformatter.com/css-beautifier.html);
-- [JSHint](https://jshint.com/);
-- [PythonCodeChecker](https://extendsclass.com/python-tester.html);
-- [ColorSpace](https://mycolor.space/);
-- [GoogleFonts](https://fonts.google.com/);
-- [AmIResponsive](http://ami.responsivedesign.is/);
-- [Flask](https://flask.palletsprojects.com/en/1.1.x/);
-- [Jinja](https://jinja.palletsprojects.com/en/2.10.x/);
+- [JavaScriptValidator](https://esprima.org/demo/validate.html)
+- [HTMLFormatter](https://htmlformatter.com/)
+- [CSSBeautifier](https://www.freeformatter.com/css-beautifier.html)
+- [JSHint](https://jshint.com/)
+- [PythonCodeChecker](https://extendsclass.com/python-tester.html)
+- [ColorSpace](https://mycolor.space/)
+- [GoogleFonts](https://fonts.google.com/)
+- [AmIResponsive](http://ami.responsivedesign.is/)
+- [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+- [Jinja](https://jinja.palletsprojects.com/en/2.10.x/)
 - [PyMongo](https://pymongo.readthedocs.io/en/stable/)
 - [PEP8](http://pep8online.com/)
 
@@ -318,6 +318,10 @@ Special thanks to:
 This project was created for educational use only as part of the Code Institute Full Stack Software Development Course for Milestone 3!
 
 Peter Komaromi 
+
+
+
+[Back to Top](#table-of-contents)
 
 
 
