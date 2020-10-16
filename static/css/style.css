@@ -143,8 +143,10 @@ nav ul a{
 }
 
 
-.card-title {
+.card .card-title {
     color: #06273A;
+    font-size: 1.07rem;
+    font-weight: 600;
 }
 
 .card{
@@ -157,9 +159,9 @@ nav ul a{
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
     color: #9D2A2C;
-    font-size: 1rem;
+    font-size: .52rem;
     line-height: 30px;
-    font-weight: 600;
+    font-weight: 900;
 }
 
 .card .card-content {
@@ -239,6 +241,11 @@ nav ul a{
     }
     .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
         font-size: 1.55rem;
+    }
+
+    .card .card-title {
+    font-size: 1.85rem;
+    font-weight: 600;
     }
 
     #error {
