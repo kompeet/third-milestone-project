@@ -15,20 +15,20 @@
 ## Table of Contents
 
 1. [**UX**](#ux)
-    - [**Project Goals**](#project)
-    - [****User Stories**](#user)
-    - [**Developer Goals**](#developer)
-    - [**Design**](#design)
-        - [**Color Scheme**](#color)
-        - [**Fonts**](fonts)
+    - [**Project Goals**](#Project-Goals)
+    - [**User Stories**](#User-Stories)
+    - [**Developer Goals**](#Developer-Goals)
+    - [**Design**](#Design)
+        - [**Color Scheme**](#Color-Scheme)
+        - [**Fonts**](#Fonts)
         - [**Wireframes**](#wireframes)
-6. [**Features**](#features)
-    - [**Existing Features**](#existing)
-    - [**Future Features**](#future)
-7. [**Testing**](#testing)
-8. [**Deployment**](#deployment)
-5. [**Technologies**](#technologies)
-9. [**Credits & Acknowledgements**](#credits)
+6. [**Features**](#Features)
+    - [**Existing Features**](#Existing-Features)
+    - [**Future Features**](#Future-Features)
+7. [**Testing**](#Testing)
+8. [**Deployment**](#Deployment)
+5. [**Technologies**](#Technologies)
+9. [**Credits & Acknowledgements**](#Credits-&-Acknowledgements)
 
 
 ---
