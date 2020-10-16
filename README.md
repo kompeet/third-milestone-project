@@ -155,6 +155,7 @@ I made wireframes for each page of the site from three different type of devices
         - No error found, code is syntactically valid.
     - [PythonCodeChecker](https://extendsclass.com/python-tester.html):
         - No syntax errors detected.
+- I tested on my old Sony Xperia Z1 Compact and asked my friends and family members to check on their devices.
 - I ran the application through [Website Responsive Testing](https://responsivetesttool.com) to make sure it is responsive. Below is a list of devices:
 
 <details>
@@ -207,4 +208,53 @@ I made wireframes for each page of the site from three different type of devices
 
 # Deployment
 
+### How to deploy the site
+
+To deploy the site on Heroku, you have to follow these steps:
+
+1. Create a Procfile with the terminal command `echo web: python app.py > Procfile`.
+2. Create a requirements.txt: `pip3 freeze --local > requirements.txt`.
+3. Login to Heroku and create a new app.
+4. Push and commit your requirements.tx and Procfile to GitHub repo.
+5. On the Heroku page of the app, click on the Deploy and then to the Connect to GitHub.
+6. Select the repository and link to the Heroku collection.
+7. Set the Config Vars in the Settings:
+    - Debug: False;
+    - IP: 0.0.0.0;
+    - PORT: 5000;
+    - MONGO_URI: `mongodb+srv://<username>:<password>@<cluster_name>-qtxun.mongodb.net/<database_name>?retryWrites=true&w=majority;`
+    - SECRET_KEY: <your_secret_key>.
+8. Go back to the Deploy page, click on the Deploy then on Deploy Branch.
+9. The app is deployed on heroku, you can open by clicking on the Open app.
+
+### How to deploy locally
+
+Ensure that you have these components:
+
+- [Pip](https://pip.pypa.io/en/stable/installing/);
+- [MongoDBaccount](https://www.mongodb.com/cloud/atlas) and set up database.
+- [Python3](https://www.python.org/downloads/);
+- [Git](https://gist.github.com/derhuerst/1b15ff4652a867391f03)
+
+1. Download the repository from GitHub by clicking the "download zip" button.
+You can clone the respository with the following command:
+`git clone https://github.com/kompeet/third-milestone-project`
+2. Unpack the files, then navigate them to the correct file location.
+3. Create an env which has to contain the MONGO_URI and SECRET_KEY values.
+4. Install all requirements from the requirements.txt file using this command:
+`sudo -H pip3 -r requirements.txt`
+5. Create a Procfile and set the web scale.
+`echo web: python app.py > Procfile`
+`heroku ps:scale web=1`
+6. Sign in to the MongoDB and create a new database.
+7. Type to the terminal
+`python app.py`
+
+The app's preview should be available.
+
+
+---
+
+
+[Back to Top](#table-of-contents)
 
