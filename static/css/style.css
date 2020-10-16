@@ -205,20 +205,25 @@ nav ul a{
 
 @media only screen and (min-width: 310px) and (max-width: 769px) {
 	body {
-        font-size: 1.50rem;
+        font-size: 1.25rem;
     }
     
+    h3 {
+        font-size: 1.50rem;
+    }
+
     .side-nav li>a {
         font-size: 1.50rem;
         padding: 0 8px;
     }
     .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
-        font-size: 1.30rem;
+        font-size: 1.10rem;
     }
 
     #error {
         font-size: 1.75rem;
     }
+
     p {
         font-size: 1.50rem;
     }
@@ -228,14 +233,21 @@ nav ul a{
     }
 
     .page-footer {
-        font-size: .95rem;
+        font-size: .75rem;
+    }
+
+    #modal1 {
+    width: 80%;
+    height: 100%;
+    font-size: 1rem;
+    }
 }
 
 
 /***Tested on  Ipad and Ipad Pro ***/
 
 @media screen and (min-width: 770px) and (max-width: 1023px) {
-	body { font-size: 1.60rem;
+	body { font-size: 1.45rem;
     }
     
     .side-nav li>a {
