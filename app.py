@@ -38,7 +38,7 @@ def find_recipes():
     search_term = mongo.db.recipes.find({"ingredients": {"$regex": query}})
     search = search_term
     no_of_docs = mongo.db.recipes.count_documents(
-        {"ingredients": {"$regex": query}})
+     {"ingredients": {"$regex": query}})
     all_categories = list(mongo.db.categories.find())
     return render_template(
         "result.html",
@@ -51,16 +51,17 @@ def get_recipes():
     # List of the recipes with find() method
     all_categories = list(mongo.db.categories.find())
     return render_template(
-     "recipes.html",
-     categories=all_categories, recipes=mongo.db.recipes.find())
+        "recipes.html",
+        categories=all_categories, recipes=mongo.db.recipes.find())
 
 
 # Add new recipe using a form, submiting it using POST method
 @app.route('/add_recipe')
 def add_recipe():
     all_categories = list(mongo.db.categories.find())
-    return render_template('addrecipes.html',
-    categories=all_categories)     
+    return render_template(
+        'addrecipes.html',
+        categories=all_categories)
 
 
 @app.route('/insert_recipe', methods=['POST'])
@@ -73,24 +74,23 @@ def insert_recipe():
 # Find a recipe by its ID then render the editrecipe HTML file
 @app.route('/edit_recipe/<recipe_id>')
 def edit_recipe(recipe_id):
-   the_recipe =  mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})  
-   all_categories = list(mongo.db.categories.find())
-   return render_template('editrecipe.html', recipe=the_recipe,
-                          categories=all_categories)    
+    the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    all_categories = list(mongo.db.categories.find())
+    return render_template(
+        'editrecipe.html',
+        recipe=the_recipe, categories=all_categories)
 
 
 # Update the article after editing it using JSON
 @app.route('/update_recipe/<recipe_id>', methods=["POST"])
 def update_recipe(recipe_id):
     recipes = mongo.db.recipes
-    recipes.update({'_id': ObjectId(recipe_id)},
-    {'title': request.form.get('title'),
-    'ingredients': request.form.get('ingredients'),
-    'steps': request.form.get('steps'),
-    'category_name': request.form.get('category_name'),
-    'picture': request.form.get('picture')
-    }
-    )
+    recipes.update({'_id': ObjectId(recipe_id)}, {
+        'title': request.form.get('title'),
+        'ingredients': request.form.get('ingredients'),
+        'steps': request.form.get('steps'),
+        'category_name': request.form.get('category_name'),
+        'picture': request.form.get('picture')})
 # When the recipe is updated, redirect the user to the list of recipes
     return redirect(url_for('get_recipes'))
 
@@ -109,17 +109,18 @@ def delete_recipe(recipe_id):
 
 @app.route('/get_categories')
 def get_categories():
-    return render_template('categories.html',
-                           categories=mongo.db.categories.find())
+    return render_template(
+        'categories.html',
+        categories=mongo.db.categories.find())
 
 
 @app.route('/display_categories/<category_name>')
 def display_categories(category_name):
-    all_recipe=mongo.db.recipes.find({"category_name": category_name})
+    all_recipe = mongo.db.recipes.find({"category_name": category_name})
     all_categories = list(mongo.db.categories.find())
-    return render_template('displaycategories.html',  
-       recipes=all_recipe, category=category_name,
-                           categories=all_categories)
+    return render_template(
+     'displaycategories.html', recipes=all_recipe, category=category_name,
+     categories=all_categories)
 
 
 # Displaying cards with split method
