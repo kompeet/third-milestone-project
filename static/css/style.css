@@ -112,8 +112,8 @@ nav ul a{
 #modal1 {
 	background-color: #06273A;
 	color: #CE7C2E;
-	width: 40%;
-	height: 60%;
+	width: 50%;
+	height: 70%;
 	text-align: center;
 }
 
@@ -203,7 +203,7 @@ nav ul a{
 
 @media only screen and (min-width: 310px) and (max-width: 769px) {
 	body {
-        font-size: 1.70rem;
+        font-size: 1.50rem;
     }
     
     .side-nav li>a {
@@ -211,18 +211,14 @@ nav ul a{
         padding: 0 8px;
     }
     .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
-        font-size: 1.55rem;
-    }
-
-    .card .card-title {
-        font-size: 1.45rem;
+        font-size: 1.30rem;
     }
 
     #error {
         font-size: 1.75rem;
     }
     p {
-        font-size: 1.10rem;
+        font-size: 1.50rem;
     }
 
     #info {
@@ -234,7 +230,7 @@ nav ul a{
 /***Tested on  Ipad and Ipad Pro ***/
 
 @media screen and (min-width: 770px) and (max-width: 1023px) {
-	body { font-size: 1.70rem;
+	body { font-size: 1.60rem;
     }
     
     .side-nav li>a {
@@ -242,18 +238,14 @@ nav ul a{
         padding: 0 8px;
     }
     .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
-        font-size: 1.80rem;
-    }
-
-    .card .card-title {
-        font-size: 1.75rem;
+        font-size: 1.55rem;
     }
 
     #error {
         font-size: 1.85rem;
     }
     p {
-        font-size: 1.50rem;
+        font-size: 1.60rem;
     }
 
     #info {
